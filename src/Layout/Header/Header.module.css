@@ -1,7 +1,9 @@
 .header{
     position: fixed;
+    z-index: 200;
     width: 100%;
     height: var(--header-height);
+    background-color: var(--color-bg-1);
 }
 .toolBar {
     position: relative;
@@ -62,7 +64,7 @@
     display: none;
 }
 
-@media only screen and (min-width: 900px){
+@media only screen and (min-width: 700px){
     .desktopOnly {
         display: flex;
     }

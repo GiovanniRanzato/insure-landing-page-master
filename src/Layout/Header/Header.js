@@ -14,7 +14,8 @@ const Header = (props) => {
         <img
             className={classes.menuButton + " " + classes.mobileOnly}
             onClick={() => setOpenMenu(!openMenu)}
-            src={props.menuBtn.path} />
+            src={props.menuBtn.path} 
+            alt={props.menuBtn.label}/>
         </Container>
         <Container className={classes.menu + " " + menuState + " " + classes.mobileOnly}>
         <ul >{menu}</ul>

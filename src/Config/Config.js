@@ -29,3 +29,13 @@ export const HEADER = {
         label: 'open menu',
     }
 }
+export const HERO = {
+    title: "Humanizing your insurance.",
+    description: "Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.",
+    cta: "View plans"
+}
+
+
+
+
+
