@@ -1,4 +1,4 @@
-.hero{
+.hero {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -6,19 +6,19 @@
     width: 100%;
     margin-bottom: 175px;
     margin-top: var(--header-height);
-
     color: var(--color-neutral-vlg);
     background-color: var(--color-neutral-dv);
-    background-image: url('../../images/bg-pattern-intro-left-mobile.svg');
+    /* background-image: url('../../images/bg-pattern-intro-left-mobile.svg');
     background-repeat: no-repeat;
     background-position-x: 0;
-    background-position-y: 450px;
- 
+    background-position-y: 450px; */
 }
+
 .container {
     position: relative;
 }
-.cover{
+
+.cover {
     position: relative;
     z-index: 4;
     width: 100%;
@@ -29,49 +29,72 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-.content{
+
+.content {
+    position: absolute;
     display: flex;
     flex-flow: column;
     align-items: center;
     position: relative;
     z-index: 2;
-
-
     background-size: 170px 165px;
     padding: 96px 0;
     z-index: 2;
 }
-.hero::after{
+
+.hero::after {
     content: "";
     height: 330px;
     width: 125px;
     position: absolute;
     right: 0;
-    bottom:-175px;
+    bottom: -175px;
     z-index: 3;
     background-image: url("../../images/bg-pattern-intro-right-mobile.svg");
 }
-.hero::before{
+
+.hero::before {
+    content: "";
+    height: 165px;
+    width: 165px;
+    position: absolute;
+    left: 0;
+    top: 450px;
+    z-index: 3;
+    background-image: url('../../images/bg-pattern-intro-left-mobile.svg');
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container::after,
+.container::before {
     position: absolute;
     z-index: 4;
-    bottom:-140px;
     content: "";
     height: 1px;
     width: 145px;
-    background-color: var( --color-neutral-dgv);
-
 }
 
-.title{
+.container::after {
+    bottom: -140px;
+    background-color: var( --color-neutral-dgv);
+}
+
+.title {
     color: var(--color-neutral-vlg);
     font-size: 45px;
     margin-bottom: 16px;
 }
+
 .description {
     line-height: 1.8;
     margin-bottom: 32px;
 }
-.cta{
+
+.cta {
     width: 145px;
     height: 40px;
     display: flex;
@@ -82,47 +105,111 @@
     transition: color 0.5s ease-in-out;
     transition: background-color 0.5s ease-in-out;
 }
-.cta:hover{
+
+.cta:hover {
     background-color: var(--color-neutral-vlg);
     color: var(--color-primary-v);
     cursor: pointer;
 }
+
 .desktopOnly {
     display: none;
 }
-@media only screen and (min-width: 600px){
-    .cover{
+
+@media only screen and (min-width: 600px) {
+    .cover {
         height: 600px;
     }
-    .content{
+    .content {
         padding: 96px 94px;
     }
+    .hero::before {
+        top: 600px;
+    }
 }
-@media only screen and (min-width: 900px){
+
+@media only screen and (min-width: 900px) {
     .desktopOnly {
         display: unset;
     }
     .mobileOnly {
         display: none;
     }
-    .hero{
+    .hero {
         height: 600px;
     }
-    .cover{
+    .cover {
         position: absolute;
         right: 0;
-        top:0;
+        top: 0;
         width: 360px;
         height: 450px;
         background-image: url("../../images/image-intro-desktop.jpg");
     }
-    .container{
+    .container {
         margin-top: 96px;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
     }
-    .content{
+    .content {
         max-width: 430px;
         padding: 0;
         display: flex;
-        flex-flow: ;
+        text-align: left;
+        align-items: flex-start;
+    }
+    .container::before {
+        top: 0;
+        background-color: var(--color-neutral-vlg);
+    }
+    .hero::after {
+        width: 300px;
+        height: auto;
+        right: 0;
+        top: 0;
+        z-index: 5;
+        background-image: url("../../images/bg-pattern-intro-right-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: 300px;
+    }
+    .hero::before {
+        width: 130px;
+        height: 100%;
+        content: "";
+        position: absolute;
+        top: 430px;
+        z-index: 1;
+        background-image: url('../../images/bg-pattern-intro-left-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: 130px;
+    }
+    @media only screen and (min-width: 1200px) {
+        .hero {
+            margin-bottom: 300px;
+        }
+        .content {
+            max-width: 540px;
+            margin-bottom: 60px;
+        }
+        .content h1 {
+            font-size: 64px;
+        }
+        .cover {
+            width: 540px;
+            height: 650px;
+        }
+        .hero::after {
+            width: 420px;
+            background-size: 420px;
+        }
+        .hero::before {
+            width: 200px;
+            background-size: 200px;
+        }
+        .container::after {
+            bottom: -290px;
+        }
     }
 }

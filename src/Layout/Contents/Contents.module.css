@@ -1,0 +1,122 @@
+.title {
+    font-size: 46px;
+    color: var(--color-neutral-dv);
+    margin-bottom: 85px;
+}
+
+.contents {
+    margin: 0 24px;
+}
+
+.feature {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 60px;
+}
+
+.feature span {
+    margin-bottom: 40px;
+}
+
+.feature h3 {
+    font-size: 30px;
+    color: var(--color-neutral-dv);
+    margin-bottom: 24px;
+}
+
+.feature p {
+    font-size: 16px;
+    color: var(--color-neutral-dgv);
+    line-height: 2;
+}
+
+.cta {
+    display: flex;
+    flex-flow: column;
+    height: 345px;
+    background-color: var(--color-primary-v);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-image: url("../../images/bg-pattern-how-we-work-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top right;
+}
+
+.cta h2 {
+    color: white;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.cta a {
+    border: 1px solid white;
+    color: white;
+    width: 160px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: color 0.5s ease-out;
+}
+
+.cta a:hover {
+    background-color: white;
+    color: var(--color-primary-v);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+    .features {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .feature {
+        max-width: 400px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .features {
+        flex-flow: row;
+        justify-content: space-between;
+    }
+    .feature {
+        max-width: 250px;
+        align-items: flex-start;
+        text-align: left;
+        margin-bottom: 160px;
+    }
+    .title {
+        text-align: left;
+    }
+    .cta {
+        height: 250px;
+        background-image: url("../../images/bg-pattern-how-we-work-desktop.svg");
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 80px;
+        text-align: left;
+    }
+    .cta h2 {
+        margin-bottom: unset;
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .title {
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    .feature {
+        max-width: 330px;
+    }
+}
