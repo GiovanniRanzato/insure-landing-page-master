@@ -3,6 +3,10 @@ import menuBtn from '../images/icon-hamburger.svg'
 import feature_icon_1 from '../images/icon-snappy-process.svg'
 import feature_icon_2 from '../images/icon-affordable-prices.svg'
 import feature_icon_3 from '../images/icon-people-first.svg'
+import facebook_icon from '../images/icon-facebook.svg'
+import pinterest_icon from '../images/icon-pinterest.svg'
+import instagram_icon from '../images/icon-instagram.svg'
+import twitter_icon from '../images/icon-twitter.svg'
 
 export const HEADER = {
     logo: {
@@ -36,7 +40,10 @@ export const HEADER = {
 export const HERO = {
     title: "Humanizing your insurance.",
     description: "Get your life insurance coverage easier and faster. We blend our expertise and technology to help you find the plan that’s right for you. Ensure you and your loved ones are protected.",
-    cta: "View plans"
+    cta: {
+        label: "View plans",
+        url: "#"
+    }
 }
 export const CONTENTS = {
     title: "We’re different",
@@ -58,7 +65,91 @@ export const CONTENTS = {
     ],
     cta: {
         title: "Find out more about how we work",
-        label: "ho we work",
+        label: "how we work",
         url: "#"
     }
+}
+export const FOOTER = {
+    logo: {
+        path: logo,
+        alt: 'logo'
+    },
+    social: [{
+            path: '#',
+            icon: facebook_icon,
+            name: "facebook"
+        },
+        {
+            path: '#',
+            icon: twitter_icon,
+            name: "twitter"
+        },
+        {
+            path: '#',
+            icon: pinterest_icon,
+            name: "pinterest"
+        },
+        {
+            path: '#',
+            icon: instagram_icon,
+            name: "instagram"
+        }
+    ],
+    footer_menues: [{
+            title: "our company",
+            links: [{
+                label: "how we work",
+                url: "#"
+            }, {
+                label: "why insure?",
+                url: "#"
+            }, {
+                label: "wiew plans",
+                url: "#"
+            }, {
+                label: "reviews",
+                url: "#"
+            }],
+        }, {
+            title: "help me",
+            links: [{
+                label: "faq",
+                url: "#"
+            }, {
+                label: "terms of use",
+                url: "#"
+            }, {
+                label: "privacy policy",
+                url: "#"
+            }, {
+                label: "coockies",
+                url: "#"
+            }],
+        }, {
+            title: "contacts",
+            links: [{
+                label: "sales",
+                url: "#"
+            }, {
+                label: "support",
+                url: "#"
+            }, {
+                label: "live chat",
+                url: "#"
+            }],
+        }, {
+            title: "others",
+            links: [{
+                label: "careers",
+                url: "#"
+            }, {
+                label: "press",
+                url: "#"
+            }, {
+                label: "licences",
+                url: "#"
+            }],
+        },
+
+    ]
 }

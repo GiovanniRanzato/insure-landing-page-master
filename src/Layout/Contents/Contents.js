@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from '../../Hoc/Container/Container';
+import Cta from '../../Hoc/Cta/Cta';
 import classes from './Contents.module.css';
 
 const Contents = (props) => {
@@ -16,7 +17,7 @@ const Contents = (props) => {
         </div>
         <div className={classes.cta}>
             <h2 className={classes.cta_title}>{props.cta.title}</h2>
-            <a href={props.cta.url}>{props.cta.label}</a>
+            <Cta {...props.cta}/>
         </div>
     </Container>
 

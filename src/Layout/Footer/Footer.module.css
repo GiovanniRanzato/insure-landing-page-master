@@ -1,0 +1,42 @@
+.footer {
+    width: 100%;
+    background-color: var(--color-neutral-vlg);
+    padding: 85px 0;
+    margin-top: 145px;
+    background-image: url('../../images/bg-pattern-footer-mobile.svg');
+    background-position: top;
+    background-size: 100% 168px;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    margin-bottom: 30px;
+}
+
+.social_links {
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--color-neutral-dgv);
+}
+
+.social_links a:not(:first-child) {
+    margin-left: 18px;
+}
+
+.menues {
+    padding: 20px 0;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.menu {
+    margin-bottom: 45px;
+}
+
+.menu p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.menu li {
+    margin-bottom: 20px;
+}

@@ -1,14 +1,13 @@
 import React from 'react';
 import classes from './Layout.module.css'
 
-import {HEADER, HERO, CONTENTS} from '../Config/Config'
+import {HEADER, HERO, CONTENTS, FOOTER} from '../Config/Config'
 
 // CUSTOM COMPONETS
 import Header from './Header/Header'
 import Hero from './Hero/Hero'
 import Contents from './Contents/Contents'
-
-import Container from '../Hoc/Container/Container'
+import Footer from './Footer/Footer'
 
 const Layout = () => {
     return(
@@ -16,8 +15,7 @@ const Layout = () => {
             <Header {...HEADER }/>
             <Hero {...HERO} />
             <Contents  {...CONTENTS} />
-            <Container className={classes.contets}>contents</Container>
-            <Container className={classes.footer}>footer</Container>
+            <Footer  {...FOOTER} />
         </div>
     );
 }

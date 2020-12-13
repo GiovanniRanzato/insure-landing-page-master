@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './Hero.module.css'
 import Container from '../../Hoc/Container/Container';
+import Cta from '../../Hoc/Cta/Cta';
 
 const Hero = (props) => {
     return <div className={classes.hero}>
@@ -10,7 +11,7 @@ const Hero = (props) => {
             <div className={classes.content}>
                 <h1 className={classes.title} >{props.title}</h1>
                 <p className={classes.description} >{props.description}</p>
-                <div className={classes.cta} >{props.cta}</div>
+                <Cta {...props.cta}/>
             </div>
         </Container>
     </div>
