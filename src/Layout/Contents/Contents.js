@@ -17,7 +17,7 @@ const Contents = (props) => {
         </div>
         <div className={classes.cta}>
             <h2 className={classes.cta_title}>{props.cta.title}</h2>
-            <Cta {...props.cta}/>
+            <Cta {...props.cta} />
         </div>
     </Container>
 
