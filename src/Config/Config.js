@@ -1,12 +1,17 @@
+import React from 'react'
 import logo from '../images/logo.svg'
 import menuBtn from '../images/icon-hamburger.svg'
+import menuBtnClose from '../images/icon-close.svg'
 import feature_icon_1 from '../images/icon-snappy-process.svg'
 import feature_icon_2 from '../images/icon-affordable-prices.svg'
 import feature_icon_3 from '../images/icon-people-first.svg'
-import facebook_icon from '../images/icon-facebook.svg'
-import pinterest_icon from '../images/icon-pinterest.svg'
-import instagram_icon from '../images/icon-instagram.svg'
-import twitter_icon from '../images/icon-twitter.svg'
+
+import {ReactComponent as PinterestIcon} from '../images/icon-pinterest.svg';
+import {ReactComponent as InstagramIcon} from '../images/icon-instagram.svg';
+import {ReactComponent as TwitterIcon} from '../images/icon-twitter.svg';
+import {ReactComponent as FacebookIcon} from '../images/icon-facebook.svg';
+
+
 
 export const HEADER = {
     logo: {
@@ -34,7 +39,9 @@ export const HEADER = {
     ],
     menuBtn: {
         path: menuBtn,
+        pathClose: menuBtnClose,
         label: 'open menu',
+        labelClose: 'close menu',
     }
 }
 export const HERO = {
@@ -76,22 +83,22 @@ export const FOOTER = {
     },
     social: [{
             path: '#',
-            icon: facebook_icon,
+            icon: <FacebookIcon />,
             name: "facebook"
         },
         {
             path: '#',
-            icon: twitter_icon,
+            icon: <TwitterIcon />,
             name: "twitter"
         },
         {
             path: '#',
-            icon: pinterest_icon,
+            icon: <PinterestIcon />,
             name: "pinterest"
         },
         {
             path: '#',
-            icon: instagram_icon,
+            icon: <InstagramIcon />,
             name: "instagram"
         }
     ],

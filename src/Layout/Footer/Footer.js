@@ -4,7 +4,7 @@ import Container from '../../Hoc/Container/Container';
 
 const Footer = (props) => {
     const social_links = props.social.map((social, i) =>
-        <a key={i + social.name} href={social.path}><img src={social.icon} alt={social.name} /></a>);
+        <a key={i + social.name} href={social.path}>{social.icon}</a>);
 
     const menues = props.footer_menues.map((menu, i) => {
         const links = menu.links.map((link, i) =>
@@ -33,6 +33,7 @@ const Footer = (props) => {
                 {menues}
             </div>
         </Container>
+        <a className={classes.test}></a>
     </footer>
 }
 export default Footer;

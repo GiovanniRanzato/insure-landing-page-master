@@ -21,6 +21,10 @@
     margin-bottom: 40px;
 }
 
+.social_links a:hover path{
+    fill: var(--color-neutral-dv);
+}
+
 .social_links a:not(:first-child) {
     margin-left: 18px;
 }
@@ -44,6 +48,7 @@
     margin-bottom: 20px;
 }
 
+
 @media only screen and (min-width: 600px) {
     .menues {
         display: flex;
@@ -63,6 +68,9 @@
         background-size: 510px 240px;
         background-repeat: no-repeat;
         padding-top: 0;
+    }
+    .menu {
+        width: 400px;
     }
     .logo_social {
         width: 100%;

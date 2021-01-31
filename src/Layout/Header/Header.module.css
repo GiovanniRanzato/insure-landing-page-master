@@ -30,12 +30,22 @@
     display: flex;
     position: relative;
     z-index: 199;
-    background-color: var(--color-bg-1);
-    ;
+    background-color: var( --color-neutral-dv);
+    color: var(--color-bg-1);
     transition: all 0.4s ease-out;
+   
+}
+.mobileOnly.menu{
+    height: 100vh;
+    padding-top: 16px;
+    background-image: url("../../images/bg-pattern-mobile-nav.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: bottom;
 }
 
 .menu ul {
+    
     width: 100%;
 }
 
@@ -54,17 +64,22 @@
     align-items: center;
     justify-content: center;
 }
-
+.menu li a {
+    color: var(--color-bg-1);
+}
+.menu li a:hover {
+    color: var(--color-primary-gb);
+}
 .menuBtn a {
-    color: var(--color-neutral-dv);
-    border: 1px solid var(--color-neutral-dv);
+    color: var(--color-bg-1);
+    border: 1px solid var(--color-bg-1);
     transition: color 0.5s ease-out;
 }
-
 .menuBtn a:hover {
-    background-color: var(--color-neutral-dv);
-    color: var(--color-neutral-vlg);
+    background-color: var(--color-bg-1);
+    color: var(--color-neutral-dv);
 }
+
 
 .open {
     transform: translateY(0)
@@ -85,6 +100,9 @@
     .mobileOnly {
         display: none;
     }
+    .menu{
+        background-color: var(--color-bg-1);
+    }
     .menu li {
         height: 40px;
         margin-bottom: 0;
@@ -96,5 +114,16 @@
     }
     .menuBtn a {
         min-width: 150px;
+    }
+    .menu li a {
+        color: var(--color-neutral-dv)
+    }
+    .menuBtn a {
+        border: 1px solid var(--color-neutral-dv);
+        color: var(--color-neutral-dv);
+    }
+    .menuBtn a:hover {
+        background-color: var(--color-neutral-dv);
+        color: var(--color-bg-1)!important;
     }
 }
